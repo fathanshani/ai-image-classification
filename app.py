@@ -157,7 +157,6 @@ if selected == "Deteksi":
 if selected == "Histori":
     st.title("Histori Hasil Deteksi")
     st.write("Berikut ini adalah gambar dengan hasil deteksinya")
-    st.write(MONGO_URI)
     if mongo_connected:
         try:
             # Sort by the newest first
