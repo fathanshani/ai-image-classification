@@ -100,7 +100,7 @@ if selected == "Home":
 # Classification Page
 if selected == "Deteksi":
     st.title("Deteksi Gambar atau Foto")
-    uploaded_file = st.file_uploader("Choose an image...", type=["jpg", "png", "jpeg"])
+    uploaded_file = st.file_uploader("Pilih gambar yang ingin dideteksi...", type=["jpg", "png", "jpeg"])
 
     if uploaded_file is not None:
         # Load gambar
@@ -192,7 +192,7 @@ if selected == "Tentang":
         st.image('assets/profile.jpg', caption='Fathan Shani Putra Aliadi')
 
     with colDesc:
-        st.write("""Seorang mahasiswa semester 6 dari Universitas Gunadarma yang mengampu di jurusan Informatika.
+        st.write("""Seorang mahasiswa yang sedang menjalani program studi Informatika di Universitas Gunadarma .
                  Memiliki ketertarikan di dunia _artificial intelligence_ dan data.
                  """)
         st.page_link("https://github.com/fathanshani", label="GitHub", icon="🔗")
