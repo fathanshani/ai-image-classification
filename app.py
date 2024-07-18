@@ -114,7 +114,7 @@ if selected == "Deteksi":
         prediction = model.predict(img_array)
         predicted_class = class_names[int(np.round(prediction)[0][0])]
 
-        colResult, colGif = st.columns(3, vertical_alignment='center')
+        colResult, colGif = st.columns(2, vertical_alignment='center')
 
         if predicted_class == 'Human':
             with colResult:
