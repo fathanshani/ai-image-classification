@@ -141,6 +141,9 @@ if selected == "Deteksi":
 
         if mongo_connected:
             try:
+                if img.mode != "RGB":
+                    img = img.convert("RGB")
+                    
                 # Simpan gambar ke MongoDB
                 img_byte_arr = io.BytesIO()
                 img.save(img_byte_arr, format='JPEG')
