@@ -49,7 +49,7 @@ class_names = ["AI", "Human"]
 
 # Fungsi untuk load dan proses gambar
 def load_and_preprocess_image(img):
-    if img.mode == 'RGBA':
+    if img.mode != 'RGB':
         img = img.convert('RGB')
     img = img.resize((224, 224))
     img_array = image.img_to_array(img)
@@ -72,7 +72,7 @@ def load_lottiefile(filepath: str):
 lottie_human = load_lottiefile("assets/Animation - human.json")
 lottie_ai = load_lottiefile("assets/Animation - AI.json")
 
-# Welcome Page
+# Home Page
 if selected == "Home":
     st.title("Pendeteksi Gambar Buatan AI")
     st.write("""
@@ -91,13 +91,13 @@ if selected == "Home":
 
     with col1:
         st.subheader("Buatan Manusia")
-        st.image("assets/human1.jpg", width=320)  # Ubah path sesuai contoh gambar Human
+        st.image("assets/human1.jpg", width=320) 
 
     with col2:
         st.subheader("Buatan AI")
-        st.image("assets/woman-8161029_1920.jpg", width=320)  # Ubah path sesuai contoh gambar AI
+        st.image("assets/woman-8161029_1920.jpg", width=320)
 
-# Classification Page
+# Deteksi Page
 if selected == "Deteksi":
     st.title("Deteksi Gambar atau Foto")
     uploaded_file = st.file_uploader("Pilih gambar yang ingin dideteksi...", type=["jpg", "png", "jpeg"])
@@ -156,7 +156,7 @@ if selected == "Deteksi":
         else:
             st.warning("Tidak dapat menyimpan hasil ke MongoDB karena database tidak tersedia.")
 
-# History Page
+# Histori Page
 if selected == "Histori":
     st.title("Histori Hasil Deteksi")
     st.write("Berikut ini adalah gambar dengan hasil deteksinya")
