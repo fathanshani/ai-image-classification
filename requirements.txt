@@ -1,0 +1,9 @@
+numpy==1.23.0
+pandas==2.2.2
+Pillow==10.4.0
+pymongo==4.8.0
+python-dotenv==1.0.1
+streamlit==1.36.0
+streamlit_lottie==0.0.5
+streamlit_option_menu==0.3.13
+tensorflow==2.10.1
